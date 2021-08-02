@@ -58,8 +58,9 @@ pipeline {
         stage('Cleaning up') { 
 
             steps { 
+                tag="$registry+'dev'+:$BUILD_NUMBER"
 
-                sh "docker rmi $registry+'dev'+:$BUILD_NUMBER" 
+                sh "docker rmi $tag"
 
             }
 
