@@ -5,6 +5,7 @@ pipeline {
         registry = 'minalmahor/flaskapi'
 
         registryCredential = 'dockerHub' 
+         tag= "$registry+'dev'+:$BUILD_NUMBER"
 
         dockerImage = '' 
 
@@ -58,7 +59,7 @@ pipeline {
         stage('Cleaning up') { 
 
             steps { 
-                tag="$registry+'dev'+:$BUILD_NUMBER"
+               
 
                 sh "docker rmi $tag"
 
