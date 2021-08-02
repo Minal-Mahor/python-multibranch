@@ -18,7 +18,7 @@ pipeline {
 10
             steps { 
 11
-                git 'https://github.com/YourGithubAccount/YourGithubRepository.git' 
+                git 'https://github.com/Minal-Mahor/python-multibranch.git' 
 12
             }
 13
