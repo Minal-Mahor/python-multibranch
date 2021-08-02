@@ -61,7 +61,7 @@ pipeline {
             steps { 
                
 
-                sh "docker rmi $tag$BUILD_NUMBER"
+                sh "docker rmi $branch$BUILD_NUMBER"
 
             }
 
