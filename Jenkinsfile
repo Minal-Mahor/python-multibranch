@@ -2,7 +2,7 @@ pipeline {
 
     environment { 
 
-        registry = "minalmahor/FlaskWebApp" 
+        registry = 'minalmahor/flaskapi'
 
         registryCredential = 'dockerHub' 
 
