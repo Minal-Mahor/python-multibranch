@@ -5,7 +5,7 @@ pipeline {
         registry = 'minalmahor/flaskapi'
 
         registryCredential = 'dockerHub' 
-         tag= "$registry+'dev'+:$BUILD_NUMBER"
+         branch= "$registry:dev:$BUILD_NUMBER"
 
         dockerImage = '' 
 
@@ -31,7 +31,7 @@ pipeline {
 
                 script { 
 
-                    dockerImage = docker.build registry +'dev'+ ":$BUILD_NUMBER" 
+                    dockerImage = docker.build registry +':dev'+ ":$BUILD_NUMBER" 
 
                 }
 
